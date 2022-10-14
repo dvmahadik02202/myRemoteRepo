@@ -25,4 +25,20 @@ public class StudentService {
 		
 		return alstu;
 	}
+
+	public static ArrayList<Student> getstudentstartwithm() throws ClassNotFoundException, SQLException {
+ArrayList<Student> alstu = StudentDao.fletchStudent();
+
+		
+		
+		 ArrayList<Student>alstufiltered=new ArrayList<Student>();
+		 
+		  for(Student Student:alstu) { if (Student.getName().startsWith("m")&&
+		  (Student.getSalary()>50000)){ //System.out.println(Student);
+		  
+		  alstufiltered.add(Student); }}
+		 
+		
+		return alstufiltered;
+	}
 }
