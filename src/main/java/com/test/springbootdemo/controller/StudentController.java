@@ -25,4 +25,10 @@ public class StudentController {
 		ArrayList<Student>alstu=StudentService.fletchStudent();
 		return alstu;
 	}
+	
+	@GetMapping("/getstudentstartwithm")
+	static ArrayList<Student> getstudentstartwithm()throws Exception {
+		ArrayList<Student>alstu=StudentService.getstudentstartwithm();
+		return alstu;
+	}
 }
